@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution items", "Solution items", "{1AEAFFAA-EF2A-42E5-A5CB-6DF976AB3C68}"
+	ProjectSection(SolutionItems) = preProject
+		AdventOfCode2016.Common.targets = AdventOfCode2016.Common.targets
+		AdventOfCode2016.msbuild = AdventOfCode2016.msbuild
+		Build.cmd = Build.cmd
+		Missy.ruleset = Missy.ruleset
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{63A6E673-D3DE-4BAB-BAC9-7DD1EC7CC16E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StyleCop", "StyleCop", "{040D621F-AB30-4665-A27E-32857022ACEC}"
+	ProjectSection(SolutionItems) = preProject
+		Tools\StyleCop\stylecop.json = Tools\StyleCop\stylecop.json
+		Tools\StyleCop\StyleCop.Targets = Tools\StyleCop\StyleCop.Targets
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Nuget", "Nuget", "{5C653F5E-239F-4397-B6F8-076851730E79}"
+	ProjectSection(SolutionItems) = preProject
+		Tools\NuGet\CredentialProvider.VSS.exe = Tools\NuGet\CredentialProvider.VSS.exe
+		Tools\NuGet\NuGet.Config = Tools\NuGet\NuGet.Config
+		Tools\NuGet\NuGet.exe = Tools\NuGet\NuGet.exe
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventOfCode2016.Solutions", "AdventOfCode2016.Solutions\AdventOfCode2016.Solutions.csproj", "{D8B19580-6955-4605-B4D1-0D79049E3F1E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D8B19580-6955-4605-B4D1-0D79049E3F1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8B19580-6955-4605-B4D1-0D79049E3F1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8B19580-6955-4605-B4D1-0D79049E3F1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8B19580-6955-4605-B4D1-0D79049E3F1E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{040D621F-AB30-4665-A27E-32857022ACEC} = {63A6E673-D3DE-4BAB-BAC9-7DD1EC7CC16E}
+		{5C653F5E-239F-4397-B6F8-076851730E79} = {63A6E673-D3DE-4BAB-BAC9-7DD1EC7CC16E}
+	EndGlobalSection
+EndGlobal

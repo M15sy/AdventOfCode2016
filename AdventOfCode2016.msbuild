@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+	<PropertyGroup>
+		<Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
+		<PlatformToolset>v140</PlatformToolset>
+		<OutDir Condition="'$(BUILD_STAGINGDIRECTORY)' != ''" >$(BUILD_STAGINGDIRECTORY)\</OutDir>
+		<OutDir Condition="'$(OutDir)' == ''" >$(MSBuildProjectDirectory)\BuildOutput\</OutDir>
+		<SolutionFile Condition="$(SolutionFile) == ''">AdventOfCode2016.sln</SolutionFile>
+		<SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">$(MSBuildThisFileDirectory)</SolutionDir>		
+	</PropertyGroup>	
+	<PropertyGroup>
+		<CodeAnalysisTreatWarningsAsErrors Condition="'$(CodeAnalysisTreatWarningsAsErrors)' == ''">true</CodeAnalysisTreatWarningsAsErrors>
+		<RunCodeAnalysis Condition="'$(RunCodeAnalysis)' == ''">true</RunCodeAnalysis>
+		<StyleCopTreatErrorsAsWarnings Condition="'$(StyleCopTreatErrorsAsWarnings)' == ''">false</StyleCopTreatErrorsAsWarnings>
+		<TreatWarningsAsErrors Condition="'$(TreatWarningsAsErrors)' == ''">true</TreatWarningsAsErrors>
+	</PropertyGroup>
+	<PropertyGroup>
+	<BuildProperties>Configuration=$(Configuration);OutDir=$(OutDir);RunCodeAnalysis=$(RunCodeAnalysis);TreatWarningsAsErrors=$(TreatWarningsAsErrors);CodeAnalysisTreatWarningsAsErrors=$(CodeAnalysisTreatWarningsAsErrors);StyleCopTreatErrorsAsWarnings=$(StyleCopTreatErrorsAsWarnings);SolutionDir=$(SolutionDir)
+	</BuildProperties>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(BuildCMSPackages)' == 'true'">
+		<DeployOnBuild Condition="'$(DeployOnBuild)' == ''">true</DeployOnBuild>
+		<DeploymentDropFolder Condition="'$(DeploymentDropFolder)' == ''">$(OutDir)_DeploymentDrop</DeploymentDropFolder>
+		<PackageLocation Condition="'$(PackageLocation)' == ''">$(DeploymentDropFolder)</PackageLocation>
+		<SkipInvalidConfigurations Condition="'$(SkipInvalidConfigurations)' == ''">true</SkipInvalidConfigurations>
+		<WebPublishMethod Condition="'$(WebPublishMethod)' == ''">Package</WebPublishMethod>
+		<BuildProperties>$(BuildProperties);DeployOnBuild=$(DeployOnBuild);DeploymentDropFolder=$(DeploymentDropFolder);PackageLocation=$(PackageLocation);SkipInvalidConfigurations=$(SkipInvalidConfigurations);WebPublishMethod=$(WebPublishMethod)
+		</BuildProperties>
+	</PropertyGroup>
+
+	<!-- Build -->
+	<PropertyGroup>
+		<OutDir Condition="'$(OutDir)' == ''" >$(MSBuildProjectDirectory)\BuildOutput\</OutDir>
+		<SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">$(MSBuildThisFileDirectory)</SolutionDir>
+		<SolutionFile Condition="$(SolutionFile) == ''">AdventOfCode2016.sln</SolutionFile>
+	</PropertyGroup>
+	<Target Name="Build" DependsOnTargets="RestorePackages">
+		<MSBuild Projects="$(SolutionFile)" Targets="Build" Properties="$(BuildProperties)" />
+	</Target>
+
+	<!-- Restore NuGet packages -->
+	<Target Name="RestorePackages">
+		<PropertyGroup>
+			<NuGetToolsPath>$([System.IO.Path]::Combine($(SolutionDir), "Tools", "NuGet"))</NuGetToolsPath>
+			<NuGetExePath>$(NuGetToolsPath)\nuget.exe</NuGetExePath>
+			<RequireRestoreConsent>false</RequireRestoreConsent>
+		</PropertyGroup>
+		<Message Text="Restoring NuGet packages..." Importance="normal" />
+		<Exec Command="%22$(NuGetExePath)%22 restore %22$(SolutionFile)%22" LogStandardErrorAsError="true" />
+	</Target>
+
+</Project>

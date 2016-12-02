@@ -1,0 +1,45 @@
+{
+  "$schema": "https://raw.githubusercontent.com/DotNetAnalyzers/StyleCopAnalyzers/master/StyleCop.Analyzers/StyleCop.Analyzers/Settings/stylecop.schema.json",
+  "settings": {
+    "documentationRules": {
+      "companyName": "Missy",
+      "copyrightText": "",
+      "documentExposedElements": true,
+      "documentInterfaces": true,
+      "documentInternalElements": false,
+      "documentPrivateElements": false,
+      "documentPrivateFields": false,
+      "fileNamingConvention": "metadata",
+      "xmlHeader": false,
+      "variables": {
+        "ownerName": "Missy",
+        "year": "2016"
+      }
+    },
+    "layoutRules": {
+      "newlineAtEndOfFile": "allow"
+    },
+    "maintainabilityRules": {
+    },
+    "namingRules": {
+      "allowCommonHungarianPrefixes": true,
+      "allowedHungarianPrefixes": [
+      ]
+    },
+    "orderingRules": {
+      "elementOrder": [
+        "kind",
+        "accessibility",
+        "constant",
+        "static",
+        "readonly"
+      ],
+      "systemUsingDirectivesFirst": true,
+      "usingDirectivesPlacement": "insideNamespace"
+    },
+    "readabilityRules": {
+    },
+    "spacingRules": {
+    }
+  }
+}

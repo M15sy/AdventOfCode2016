@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+	<!-- StyleCop -->
+	<PropertyGroup>
+		<CodeAnalysisRuleSet>$(SolutionDir)Missy.ruleset</CodeAnalysisRuleSet>
+		<CodeAnalysisRuleSet Condition="!Exists('$(CodeAnalysisRuleSet)')">$(MSBuildProgramFiles32)\Microsoft Visual Studio 12.0\Team Tools\Static Analysis Tools\Rule Sets\AllRules.ruleset</CodeAnalysisRuleSet>
+		<CodeAnalysisRuleSet Condition="!Exists('$(CodeAnalysisRuleSet)')">$(MSBuildProgramFiles32)\Microsoft Visual Studio 11.0\Team Tools\Static Analysis Tools\Rule Sets\AllRules.ruleset</CodeAnalysisRuleSet>
+		<HighEntropyVA>true</HighEntropyVA>  
+	</PropertyGroup>
+	<PropertyGroup>
+		<_StyleCopInstallDir>$(SolutionDir)\Tools\StyleCop\</_StyleCopInstallDir>
+		<_StyleCopInstalled Condition="Exists('$(_StyleCopInstallDir)')">true</_StyleCopInstalled>
+		<_StyleCopTargets>$(_StyleCopInstallDir)StyleCop.targets</_StyleCopTargets>
+	</PropertyGroup>
+	<Import Project="$(_StyleCopTargets)" Condition=" '$(_StyleCopInstalled)' == 'true' " />
+
+</Project>

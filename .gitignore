@@ -1,0 +1,11 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/AdventOfCode2016.Solutions/obj
+/packages
+/BuildOutput
+/bin/Debug
+/.vs
+/AdventOfCode2016.Solutions/bin/Debug
+/AdventOfCode2016.Solutions/AdventOfCode2016.Solutions.csproj.user
