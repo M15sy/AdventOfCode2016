@@ -1,4 +1,4 @@
-﻿namespace AdventOfCode2016.Solutions.Day1
+﻿namespace AdventOfCode2016.Core.Day1
 {
     /// <summary>
     /// An enumeration of cardinal directions.

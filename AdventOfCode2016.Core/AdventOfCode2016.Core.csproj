@@ -4,18 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D8B19580-6955-4605-B4D1-0D79049E3F1E}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{7040BBBF-DF94-4256-95F0-CE04322E270A}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AdventOfCode2016</RootNamespace>
-    <AssemblyName>AdventOfCode2016</AssemblyName>
+    <RootNamespace>AdventOfCode2016.Core</RootNamespace>
+    <AssemblyName>AdventOfCode2016.Core</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -26,7 +24,6 @@
     <CodeAnalysisRuleSet>..\Missy.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -34,12 +31,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <Import Project="$(SolutionDir)AdventOfCode2016.Common.targets" />
   <ItemGroup>
-    <Reference Include="NuGet.Core, Version=2.5.40416.9020, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\NuGet.Core.2.5.0\lib\net40-Client\NuGet.Core.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -50,22 +42,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Solutions\Day1\Solution1.cs" />
-    <Compile Include="Solutions\Day1\Coordinate.cs" />
-    <Compile Include="Solutions\Day1\Directions.cs" />
-    <Compile Include="Solutions\Day1\Position.cs" />
-    <Compile Include="Solutions\Day1\Solution1a.cs" />
-    <Compile Include="Solutions\Day1\Solution1b.cs" />
-    <Compile Include="Solutions\SolutionBase.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Day2\Button.cs" />
+    <Compile Include="Day2\NumberPad.cs" />
+    <Compile Include="Day2\Solution2.cs" />
+    <Compile Include="Day2\Solution2b.cs" />
+    <Compile Include="ISolution.cs" />
+    <Compile Include="SolutionManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Day1\Coordinate.cs" />
+    <Compile Include="Day1\Directions.cs" />
+    <Compile Include="Day1\Position.cs" />
+    <Compile Include="Day1\Solution1.cs" />
+    <Compile Include="Day1\Solution1a.cs" />
+    <Compile Include="Day1\Solution1b.cs" />
+    <Compile Include="Day2\Solution2a.cs" />
+    <Compile Include="SolutionBase.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Solutions\Day2\" />
+    <Folder Include="Day3\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\Day1.txt">

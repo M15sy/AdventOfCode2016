@@ -1,4 +1,4 @@
-﻿namespace AdventOfCode2016.Solutions.Day1
+﻿namespace AdventOfCode2016.Core.Day1
 {
     /// <summary>
     /// A base class for day 1 solutions.

@@ -1,4 +1,4 @@
-﻿namespace AdventOfCode2016.Solutions
+﻿namespace AdventOfCode2016.Core
 {
     using System;
     using System.IO;
@@ -7,7 +7,7 @@
     /// <summary>
     /// A base class representing a solution for an Advent of Code question.
     /// </summary>
-    internal abstract class SolutionBase
+    internal abstract class SolutionBase : ISolution
     {
         private string _data;
 
@@ -40,23 +40,12 @@
         /// <summary>
         /// Gets the name of the question.
         /// </summary>
-        protected abstract string QuestionName { get; }
-
-        /// <summary>
-        /// A method that output's the solution to the console.
-        /// </summary>
-        internal virtual void Solve()
-        {
-            Console.WriteLine(Invariant($"Begin: {QuestionName} "));
-            Console.WriteLine(Invariant($"Answer: {Calculate()}"));
-            Console.WriteLine(Invariant($"End: {QuestionName}"));
-            Console.WriteLine();
-        }
+        public abstract string QuestionName { get; }
 
         /// <summary>
         /// A method that calculates the answer.
         /// </summary>
         /// <returns>The calculated answer as a <see cref="string"/>.</returns>
-        protected abstract string Calculate();
+        public abstract string Calculate();
     }
 }

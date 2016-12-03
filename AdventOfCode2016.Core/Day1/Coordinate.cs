@@ -1,4 +1,4 @@
-﻿namespace AdventOfCode2016.Solutions.Day1
+﻿namespace AdventOfCode2016.Core.Day1
 {
     /// <summary>
     /// A structure representing a coordinate in two dimensional space.

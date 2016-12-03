@@ -1,4 +1,4 @@
-﻿namespace AdventOfCode2016.Solutions.Day1
+﻿namespace AdventOfCode2016.Core.Day1
 {
     using System.Collections.Generic;
     using System.Text.RegularExpressions;
@@ -9,13 +9,13 @@
     internal class Solution1b : Solution1
     {
         /// <inheritdoc />
-        protected override string QuestionName
+        public override string QuestionName
         {
             get { return "Day 1 Part 2"; }
         }
 
         /// <inheritdoc />
-        protected override string Calculate()
+        public override string Calculate()
         {
             var instructions = Data.Split();
 

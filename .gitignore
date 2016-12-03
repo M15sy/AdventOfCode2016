@@ -9,3 +9,8 @@
 /.vs
 /AdventOfCode2016.Solutions/bin/Debug
 /AdventOfCode2016.Solutions/AdventOfCode2016.Solutions.csproj.user
+/AdventOfCode2016.Console/obj
+/AdventOfCode2016.Core/bin/Debug
+/AdventOfCode2016.Console/bin/Debug
+/AdventOfCode2016.Core/obj
+*.user
