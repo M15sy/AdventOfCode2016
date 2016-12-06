@@ -7,24 +7,24 @@
     /// <summary>
     /// A class representation of a number pad.
     /// </summary>
-    public class NumberPad
+    internal class NumberPad
     {
         /// <summary>
         /// Gets or sets the buttons on the number pad.
         /// </summary>
-        public IEnumerable<Button> Buttons { get; private set; }
+        internal IEnumerable<Button> Buttons { get; private set; }
 
         /// <summary>
         /// Gets or sets the current selected button on the number pad.
         /// </summary>
-        public Button CurrentButton { get; private set; }
+        internal Button CurrentButton { get; private set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="NumberPad"/> class.
         /// </summary>
         /// <param name="buttons">The collection of button on the numberpad.</param>
         /// <param name="startButton">The start button.</param>
-        public NumberPad(IEnumerable<Button> buttons, Button startButton)
+        internal NumberPad(IEnumerable<Button> buttons, Button startButton)
         {
             if (!buttons.Contains(startButton))
             {
@@ -39,7 +39,7 @@
         /// A method to move from the current button.
         /// </summary>
         /// <param name="direction">The direction to move.</param>
-        public void Move(char direction)
+        internal void Move(char direction)
         {
             var x = CurrentButton.X;
             var y = CurrentButton.Y;

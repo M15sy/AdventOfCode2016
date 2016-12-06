@@ -46,6 +46,18 @@
     <Compile Include="Day2\NumberPad.cs" />
     <Compile Include="Day2\Solution2.cs" />
     <Compile Include="Day2\Solution2b.cs" />
+    <Compile Include="Day3\Solution3.cs" />
+    <Compile Include="Day3\Solution3a.cs" />
+    <Compile Include="Day3\Solution3b.cs" />
+    <Compile Include="Day4\Solution4.cs" />
+    <Compile Include="Day4\Solution4a.cs" />
+    <Compile Include="Day4\Solution4b.cs" />
+    <Compile Include="Day5\Solution5.cs" />
+    <Compile Include="Day5\Solution5a.cs" />
+    <Compile Include="Day5\Solution5b.cs" />
+    <Compile Include="Day6\Solution6.cs" />
+    <Compile Include="Day6\Solution6a.cs" />
+    <Compile Include="Day6\Solution6b.cs" />
     <Compile Include="ISolution.cs" />
     <Compile Include="SolutionManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -58,15 +70,25 @@
     <Compile Include="Day2\Solution2a.cs" />
     <Compile Include="SolutionBase.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Day3\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="App_Data\Day1.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="App_Data\Day2.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\Day3.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\Day4.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\Day5.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\Day6.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

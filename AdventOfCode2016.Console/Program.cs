@@ -5,7 +5,7 @@
     using AdventOfCode2016.Core;
     using static System.FormattableString;
 
-    public class Program
+    public static class Program
     {
         private static SolutionManager _solutions;
 
@@ -20,7 +20,7 @@
                 stopwatch.Start();
                 Console.WriteLine(Invariant($"Answer: {solution.Calculate()}"));
                 stopwatch.Stop();
-                Console.WriteLine($"Time taken: {stopwatch.ElapsedMilliseconds} ms");
+                Console.WriteLine(Invariant($"Time taken: {stopwatch.ElapsedMilliseconds} ms"));
                 stopwatch.Reset();
                 Console.WriteLine(Invariant($"End {solution.QuestionName}"));
                 Console.WriteLine();

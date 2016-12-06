@@ -5,12 +5,12 @@
     /// <summary>
     /// A class representation of a position.
     /// </summary>
-    public class Position
+    internal class Position
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Position"/> class.
         /// </summary>
-        public Position()
+        internal Position()
         {
             this.CurrentDirection = Directions.North;
             this.Coordinate = new Coordinate(0, 0);
@@ -19,18 +19,18 @@
         /// <summary>
         /// Gets or sets the current direction.
         /// </summary>
-        public Directions CurrentDirection { get; protected set; }
+        internal Directions CurrentDirection { get; set; }
 
         /// <summary>
         /// Gets or sets the coordinate.
         /// </summary>
-        public Coordinate Coordinate { get; protected set; }
+        internal Coordinate Coordinate { get; set; }
 
         /// <summary>
         /// A method to turn 90 degrees.
         /// </summary>
         /// <param name="clockwise">A value indicating whether to rotate clockwise or anticlockwise.</param>
-        public void Turn(bool clockwise = true)
+        internal void Turn(bool clockwise = true)
         {
             if (CurrentDirection == Directions.North && clockwise == false)
             {
@@ -50,7 +50,7 @@
         /// A method to move forward in the current direction.
         /// </summary>
         /// <param name="blocks">The number of blocks to move.</param>
-        public virtual void Move(int blocks = 1)
+        internal virtual void Move(int blocks = 1)
         {
             int x = this.Coordinate.X;
             int y = this.Coordinate.Y;
@@ -78,7 +78,7 @@
         /// A method that returns how many blocks away the current position is from the orgin.
         /// </summary>
         /// <returns>A method that returns how many blocks away the current position is from the orgin as an <see cref="int"/>.</returns>
-        public int Distance()
+        internal int Distance()
         {
             return Math.Abs(Coordinate.X) + Math.Abs(Coordinate.Y);
         }

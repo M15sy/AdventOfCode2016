@@ -11,7 +11,7 @@
         /// <inheritdoc />
         public override string QuestionName
         {
-            get { return "Day 1 Part 2"; }
+            get { return "Day 1: No Time for a Taxicab - Part 2"; }
         }
 
         /// <inheritdoc />

@@ -3,7 +3,7 @@
     /// <summary>
     /// An enumeration of cardinal directions.
     /// </summary>
-    public enum Directions : int
+    internal enum Directions : int
     {
         North = 0,
         East = 1,

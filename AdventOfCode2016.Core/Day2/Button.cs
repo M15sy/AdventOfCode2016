@@ -3,15 +3,15 @@
     /// <summary>
     /// A structure representing a button.
     /// </summary>
-    public struct Button
+    internal struct Button
     {
-        public int X;
+        internal int X;
 
-        public int Y;
+        internal int Y;
 
-        public string Value;
+        internal string Value;
 
-        public Button(int x, int y, string value)
+        internal Button(int x, int y, string value)
         {
             X = x;
             Y = y;
